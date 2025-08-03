@@ -20,7 +20,7 @@ export default function Header() {
   const closeMenu = () => setIsMobileMenuOpen(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-primary-black text-white py-4 z-50 shadow-md">
+    <header className="text-white py-4 drop-shadow-[0_4px_35px_rgba(255, 193, 7, 0.03)]">
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <nav className="hidden md:flex items-center space-x-8">

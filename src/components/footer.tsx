@@ -4,7 +4,7 @@ import { Instagram, Facebook, Linkedin } from "lucide-react";
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   return (
-    <footer className="bg-primary-gray text-white py-8 px-4 lg:py-20">
+    <footer className="bg-primary-gray text-white py-8 px-4 md:py-14 lg:py-20">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div className="md:col-span-1">

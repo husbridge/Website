@@ -1,7 +1,17 @@
+import FAQSection from "@/components/home/faq-section";
+import Features from "@/components/home/features";
+import GettingStarted from "@/components/home/get-started";
+import GetStartedToday from "@/components/home/get-started-today";
+import HeroSection from "@/components/home/hero";
+
 export default function Home() {
   return (
-    <div className="bg-primary-light-gray flex bg-new items-center justify-center min-h-screen">
-      <h2>Hello Welcome to my website </h2>
-    </div>
+    <main>
+      <HeroSection />
+      <Features />
+      <FAQSection />
+      <GettingStarted />
+      <GetStartedToday />
+    </main>
   );
 }
