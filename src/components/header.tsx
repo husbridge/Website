@@ -21,7 +21,7 @@ export default function Header() {
 
   return (
     <header className="text-white py-4 drop-shadow-[0_4px_35px_rgba(255, 193, 7, 0.03)]">
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="max-w-6xl 2xl:max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <nav className="hidden md:flex items-center space-x-8">
             {navLinks.slice(0, 2).map((link) => (
