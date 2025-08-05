@@ -150,7 +150,7 @@ interface Plan {
   key: keyof Omit<Feature, "name">;
 }
 
-function FeaturesComparison(): React.JSX.Element {
+function FeaturesComparison() {
   const features: Feature[] = [
     {
       name: "Bookings Management",
