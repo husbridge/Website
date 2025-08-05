@@ -1,4 +1,5 @@
 import Button from "@/components/button";
+import { CircleCheck, CircleX } from "lucide-react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -7,6 +8,15 @@ export const metadata: Metadata = {
 };
 
 export default function page() {
+  return (
+    <main className="text-white">
+      <Plan />
+      <FeaturesComparison />
+    </main>
+  );
+}
+
+function Plan() {
   const plans = [
     {
       name: "Talent Account",
@@ -73,64 +83,60 @@ export default function page() {
       ),
     },
   ];
+
   return (
-    <main className="text-white">
-      <div className="bg-primary-gray py-12 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 lg:px-10 2xl:px-0">
-          <div className="mb-12">
-            <h1 className="text-3xl md:text-5xl lg:text-6xl text-white/80 font-bold mb-4">
-              Choose a plan that is right for you
-            </h1>
-            <p className="font-medium text-lg md:text-2xl lg:text-3xl">
-              Take advantage of our 7-days free trial
-            </p>
-          </div>
+    <div className="bg-primary-gray py-12 lg:py-24">
+      <div className="max-w-7xl mx-auto px-4 lg:px-10 2xl:px-0">
+        <div className="mb-12">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl text-white/80 font-bold mb-4">
+            Choose a plan that is right for you
+          </h1>
+          <p className="font-medium text-lg md:text-2xl lg:text-3xl">
+            Take advantage of our 7-days free trial
+          </p>
+        </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
-            {plans.map((plan, index) => (
-              <div
-                key={index}
-                className="bg-primary-black h-fit rounded-2xl p-4 border border-[#BABABA]/20"
-              >
-                <div className="flex justify-between items-center mb-6">
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">
-                      {plan.name}
-                    </h3>
-                    <p className="text-[#6A6A6A] text-sm leading-relaxed w-5/6">
-                      {plan.description}
-                    </p>
-                  </div>
-                  {plan.icon}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
+          {plans.map((plan, index) => (
+            <div
+              key={index}
+              className="bg-primary-black h-fit rounded-2xl p-4 border border-[#BABABA]/20"
+            >
+              <div className="flex justify-between items-center mb-6">
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-2">
+                    {plan.name}
+                  </h3>
+                  <p className="text-[#6A6A6A] text-sm leading-relaxed w-5/6">
+                    {plan.description}
+                  </p>
                 </div>
-
-                <div className="mb-6 font-bold">
-                  <div className="flex items-baseline mb-2">
-                    <span className="text-3xl">{plan.price}</span>
-                    <span className="text-sm ml-1">{plan.period}</span>
-                  </div>
-
-                  {plan.setupFee && (
-                    <div className="flex items-baseline text-[#CDD1D6A1] font-bold">
-                      <span className="text-xl">{plan.setupFee}</span>
-                      <span className="text-xs ml-1">{plan.setupPeriod}</span>
-                    </div>
-                  )}
-                </div>
-                <Button className="w-full opacity-80 hover:opacity-100 transition-opacity">
-                  Get Started
-                </Button>
+                {plan.icon}
               </div>
-            ))}
-          </div>
+
+              <div className="mb-6 font-bold">
+                <div className="flex items-baseline mb-2">
+                  <span className="text-3xl">{plan.price}</span>
+                  <span className="text-sm ml-1">{plan.period}</span>
+                </div>
+
+                {plan.setupFee && (
+                  <div className="flex items-baseline text-[#CDD1D6A1] font-bold">
+                    <span className="text-xl">{plan.setupFee}</span>
+                    <span className="text-xs ml-1">{plan.setupPeriod}</span>
+                  </div>
+                )}
+              </div>
+              <Button className="w-full opacity-80 hover:opacity-100 transition-opacity">
+                Get Started
+              </Button>
+            </div>
+          ))}
         </div>
       </div>
-      <FeaturesComparison />
-    </main>
+    </div>
   );
 }
-
-import { CircleCheck, CircleX } from "lucide-react";
 
 interface Feature {
   name: string;
