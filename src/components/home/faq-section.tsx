@@ -29,7 +29,7 @@ export default function FAQSection() {
       ),
       title: "Talent Management Agencies",
       description:
-        "Horem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+        "Husride is a talent management platform designed for easy flow and modern management, enabling talent agencies to centralise their talent rosters and bookings, streamline workflows, and automate client proposals. Talent management agencies can also allocate talents under different agents based on expertise or recommendation for direct management.",
       image: "/faq-image-1.svg",
     },
     {
@@ -43,7 +43,7 @@ export default function FAQSection() {
       ),
       title: "Talent Managers",
       description:
-        "Horem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+        "Freelance and non-agency managers can easily manage talent, coordinate schedules and client communication all in one place.",
       image: "/faq-image-2.svg",
     },
     {
@@ -57,7 +57,7 @@ export default function FAQSection() {
       ),
       title: "Talents",
       description:
-        "Horem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+        "As independent creators, creatives and freelancers, Husride is the self-management platform that puts you in control of your career, helps you to fine-tune booking processes, discover new talent recruiters, track business conversations, book your own gigs, send professional proposals, showcase your portfolio and manage your calendar.",
       image: "/faq-image-3.svg",
     },
   ];

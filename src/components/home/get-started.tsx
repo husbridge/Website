@@ -13,19 +13,19 @@ export default function GettingStarted() {
       number: "01",
       title: "Sign up and verify your account",
       description:
-        "Horem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
+        "Get started now by signing up for free and verifying your Husridge account with your email.",
     },
     {
       number: "02",
       title: "Send out your magic link",
       description:
-        "Horem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
+        "Once you are signed up, share your magic link for easy booking and discovery by clients. (Magic Link is a dynamic and shareable booking link that serves as your professional portfolio, calendar, and contact card all in one.) ",
     },
     {
       number: "03",
       title: "Start getting inquiries",
       description:
-        "Horem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
+        "With your Magic Link live, you will start to get lead generation, receive client inquiries and new business requests",
     },
   ];
   return (

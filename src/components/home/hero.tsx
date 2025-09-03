@@ -14,8 +14,7 @@ export default function HeroSection() {
           </h1>
 
           <p className="text-lg sm:text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            With Husridge, you are booked easily and paid stress-free for your
-            next gig.
+            Get, manage, and automate your gig bookings with Husridge.
           </p>
 
           <Button className="mb-12 px-8 py-4 md:px-20">Get Started</Button>

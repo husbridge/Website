@@ -26,7 +26,7 @@ function FeatureContent1() {
       ),
       title: "Bookings Management",
       description:
-        "Korem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et",
+        "Automate and seamlessly manage scheduled appointments, bookings, events, and clients, and view details on every confirmed bookings.",
     },
     {
       icon: (
@@ -34,7 +34,7 @@ function FeatureContent1() {
       ),
       title: "Proposal Management",
       description:
-        "Korem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et",
+        "Access organised proposals and contracts from clients, generate invoices and automate your booking process.",
     },
     {
       icon: (
@@ -42,7 +42,7 @@ function FeatureContent1() {
       ),
       title: "Collaboration Management",
       description:
-        "Korem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et",
+        "Communicate seamlessly and share progress tracking, bringing all parties, clients, teams, and talent onto the same page, with in-real-time updates and file sharing.",
     },
   ];
   return (
@@ -108,9 +108,8 @@ function FeatureContent2() {
       <div className="space-y-6">
         <h3 className="font-semibold mb-2">Manage Schedule</h3>
         <p className="text-neutral-400 text-sm">
-          Morem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-          vulputate libero et velit interdum, ac aliquet odio mattis. Class
-          aptent taciti sociosqu ad litora torquent per conubia nostra
+          Have total control of your calendar and upcoming events with an
+          automated, online-synchronised and central scheduling.
         </p>
         <Button>Get Started</Button>
       </div>
@@ -132,9 +131,9 @@ function FeatureContent3() {
       <div className="space-y-6">
         <h3 className="font-semibold mb-2">Messaging</h3>
         <p className="text-neutral-400 text-sm">
-          Morem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-          vulputate libero et velit interdum, ac aliquet odio mattis. Class
-          aptent taciti sociosqu ad litora torquent per conubia nostra
+          Enable clients to connect with you directly and use a one-click
+          messaging for business conversations through our simplified in-app
+          messaging feature.
         </p>
         <Button>Get Started</Button>
       </div>
@@ -150,7 +149,7 @@ function FeatureContent4() {
       ),
       title: "Agency Talent Management",
       description:
-        "Korem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et",
+        "Our platform simplifies roster management and client relations by efficiently organising talent profiles, automating client communications, and generating proposals. Manage all your talent under one umbrella and assign sub-managers to specific talents for direct management.",
     },
     {
       icon: (
@@ -158,7 +157,7 @@ function FeatureContent4() {
       ),
       title: "Manager Talent Management",
       description:
-        "Korem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et",
+        "We provide a seamless way to collaborate on your talent projects, manage their calendar, and handle their day-to-day operations. We help you stay effortlessly organised and manage the business side of your talent.",
     },
     {
       icon: (
@@ -166,7 +165,7 @@ function FeatureContent4() {
       ),
       title: "Self Talent Management",
       description:
-        "Korem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et",
+        "An ultimate platform tool for freelancers and independent creators to manage and track their workflow like a pro, maximising revenue, time, and increasing work efficiency. It is a tool to find and book gigs, manage their own bookings, build and share a professional online dashboard through their personal magic link. ",
     },
   ];
   return (
