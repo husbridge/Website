@@ -15,7 +15,11 @@ export default function Features() {
   const tabs = [
     {
       key: "inquiry",
-      label: "Inquiry Management",
+      label: (
+        <p>
+          Inquiry <br /> Management
+        </p>
+      ),
       icon: (
         <ChatQuestionIcon
           width={25}
@@ -27,7 +31,11 @@ export default function Features() {
     },
     {
       key: "calendar",
-      label: "Calendar Management",
+      label: (
+        <p>
+          Calendar <br /> Management
+        </p>
+      ),
       icon: (
         <CalendarIcon
           width={25}
@@ -39,7 +47,11 @@ export default function Features() {
     },
     {
       key: "messaging",
-      label: "Easy Messaging",
+      label: (
+        <p>
+          Easy <br /> Management
+        </p>
+      ),
       icon: (
         <MessageIcon
           width={25}
@@ -51,7 +63,11 @@ export default function Features() {
     },
     {
       key: "talent",
-      label: "Talent Management",
+      label: (
+        <p>
+          Talent <br /> Management
+        </p>
+      ),
       icon: (
         <UsersIcon
           width={25}
@@ -69,15 +85,12 @@ export default function Features() {
           With Husridge, it only takes a magic link to manage Talents and
           Businesses
         </h2>
-
-        <div className="text-sm lg:text-base font-medium max-w-4xl mx-auto flex justify-center md:justify-between gap-10 mb-10 flex-wrap md:px-20 lg:px-0">
+        <div className="-mx-4 text-xs md:text-sm lg:text-base font-medium max-w-4xl md:mx-auto flex justify-between md:gap-10 md:mb-10 md:px-20 lg:px-0">
           {tabs.map((tab) => (
             <div
               key={tab.key}
               onClick={() => setActiveTab(tab.key)}
-              className={`w-20 space-y-2 flex flex-col items-center text-center cursor-pointer transition ${
-                activeTab === tab.key ? "text-primary-yellow" : "text-"
-              }`}
+              className={`md:w-20 space-y-2 flex flex-col items-center text-center cursor-pointer transition ${activeTab === tab.key ? "text-primary-yellow" : ""}`}
             >
               {tab.icon}
               <span>{tab.label}</span>
@@ -87,7 +100,6 @@ export default function Features() {
             </div>
           ))}
         </div>
-
         <FeatureContent activeTab={activeTab} />
       </div>
     </section>
