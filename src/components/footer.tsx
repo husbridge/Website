@@ -114,7 +114,7 @@ export default function Footer() {
                 <Instagram size={20} />
               </a>
               <a
-                href=""
+                href="https://www.facebook.com/share/16Fonr6q6T/?mibextid=wwXIfr"
                 target="_blank"
                 className="hover:text-primary-yellow  transition-colors"
                 aria-label="Facebook"
