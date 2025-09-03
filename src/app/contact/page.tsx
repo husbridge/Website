@@ -34,7 +34,9 @@ export default function page() {
               <p className="mb-6 leading-relaxed">
                 Reach out to us via our email address for support
               </p>
-              <Button variant="outlined">contactus@husridge.com</Button>
+              <a target="_blank" href="mailto:contactus@husridge.com">
+                <Button variant="outlined">contactus@husridge.com</Button>
+              </a>
             </div>
 
             {/* FAQs Card */}
@@ -61,7 +63,9 @@ export default function page() {
               <p className="mb-6 leading-relaxed">
                 Do you have questions? See our frequently asked questions
               </p>
-              <Button variant="outlined">Go to Help Center</Button>
+              <a target="_blank" href="mailto:contactus@husridge.com">
+                <Button variant="outlined">Go to Help Center</Button>
+              </a>
             </div>
             <div className="bg-primary-gray rounded-2xl p-8">
               <h3 className="text-xl lg:text-2xl font-semibold mb-4 text-white">
