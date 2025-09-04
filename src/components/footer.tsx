@@ -52,7 +52,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact Links */}
           <div className="md:col-span-1">
             <h3 className="font-semibold mb-4">Contact us</h3>
             <ul className="space-y-2">
