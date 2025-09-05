@@ -37,7 +37,7 @@ export default function GetStartedToday() {
 
           <div className="w-48 h-72 md:w-fit md:h-fit rotate-3 rounded-2xl overflow-hidden shadow-2xl">
             <Image
-              src="/get-started-today-3.png"
+              src="/get-started-today-3.svg"
               alt="Entertainment professional"
               className="w-full h-full object-cover"
               width={300}
