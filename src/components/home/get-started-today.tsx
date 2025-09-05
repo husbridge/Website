@@ -17,7 +17,7 @@ export default function GetStartedToday() {
         <div className="flex justify-center items-end space-x-6 md:space-x-10 lg:space-x-16">
           <div className="w-48 h-72 md:w-fit md:h-fit -rotate-3 rounded-2xl overflow-hidden shadow-2xl">
             <Image
-              src="/get-started-today-1.png"
+              src="/get-started-today-1.svg"
               alt="Performer on stage"
               className="w-full h-full object-cover"
               width={300}
@@ -27,7 +27,7 @@ export default function GetStartedToday() {
 
           <div className="-translate-y-5 w-52 h-80 md:w-fit md:h-fit rounded-2xl overflow-hidden shadow-2xl">
             <Image
-              src="/get-started-today-2.png"
+              src="/get-started-today-2.svg"
               alt="Business professional"
               className="w-full h-full object-cover"
               width={300}

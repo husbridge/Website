@@ -19,13 +19,13 @@ export default function GettingStarted() {
       number: "02",
       title: "Send out your magic link",
       description:
-        "Once you are signed up, share your magic link for easy booking and discovery by clients. (Magic Link is a dynamic and shareable booking link that serves as your professional portfolio, calendar, and contact card all in one.) ",
+        "Once you are signed up, share your magic link for easy booking and discovery by clients.",
     },
     {
       number: "03",
       title: "Start getting inquiries",
       description:
-        "With your Magic Link live, you will start to get lead generation, receive client inquiries and new business requests",
+        "With your Magic Link live, you will start to get lead generation, receive client inquiries and new business requests.",
     },
   ];
   return (

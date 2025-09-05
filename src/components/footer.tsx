@@ -35,7 +35,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/pricing"
                   className="hover:text-primary-yellow text-sm transition-colors"
                 >
                   Pricing
@@ -57,10 +57,11 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link
-                  href="mailto:contact@husridge.com"
+                  target="_blank"
+                  href="mailto:contactus@husridge.com"
                   className="hover:text-primary-yellow text-sm transition-colors"
                 >
-                  contact@husridge.com
+                  contactus@husridge.com
                 </Link>
               </li>
               <li>

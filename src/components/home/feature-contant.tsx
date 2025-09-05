@@ -26,7 +26,7 @@ function FeatureContent1() {
       ),
       title: "Bookings Management",
       description:
-        "Automate and seamlessly manage scheduled appointments, bookings, events, and clients, and view details on every confirmed bookings.",
+        "Automate and seamlessly schedule appointments, bookings, events, and clients, and view details on your calendar for every confirmed booking.",
     },
     {
       icon: (
@@ -34,7 +34,7 @@ function FeatureContent1() {
       ),
       title: "Proposal Management",
       description:
-        "Access organised proposals and contracts from clients, generate invoices and automate your booking process.",
+        "Receive and access proposals and contracts from clients, generate invoices and automate your booking process.",
     },
     {
       icon: (
@@ -42,7 +42,7 @@ function FeatureContent1() {
       ),
       title: "Collaboration Management",
       description:
-        "Communicate seamlessly and share progress tracking, bringing all parties, clients, teams, and talent onto the same page, with in-real-time updates and file sharing.",
+        "View and access collaboration requests from clients and colleagues.  Husridge enables you to share files and project updates.",
     },
   ];
   return (
@@ -129,12 +129,22 @@ function FeatureContent3() {
         />
       </div>
       <div className="space-y-6">
-        <h3 className="font-semibold mb-2">Messaging</h3>
-        <p className="text-neutral-400 text-sm">
-          Enable clients to connect with you directly and use a one-click
-          messaging for business conversations through our simplified in-app
-          messaging feature.
-        </p>
+        <div>
+          <h3 className="font-semibold mb-2">Messaging</h3>
+          <p className="text-neutral-400 text-sm">
+            Husride enables clients to connect with you directly and use
+            one-click messaging for business conversations through our
+            simplified in-app messaging feature.
+          </p>
+        </div>
+        <div>
+          <h3 className="font-semibold mb-2">Magic Link</h3>
+          <p className="text-neutral-400 text-sm">
+            Magic Link is a shareable link that allows clients to reach talents
+            and service providers. It also serves as an all-in-one professional
+            portfolio and contact card.{" "}
+          </p>
+        </div>
         <Button>Get Started</Button>
       </div>
     </div>
