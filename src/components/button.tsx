@@ -38,7 +38,7 @@ export default function Button({
     <button
       type={type}
       onClick={onClick}
-      className={`rounded-full font-medium transition duration-200 ${sizeClasses} ${variantClasses} ${className}`}
+      className={`rounded-full font-medium transition duration-200 ${sizeClasses} ${variantClasses} ${className} cursor-pointer`}
     >
       {children}
     </button>

@@ -1,3 +1,6 @@
+"use client";
+
+import { useWaitlist } from "@/contexts/waitlist-context";
 import Button from "../button";
 import Image from "next/image";
 
@@ -8,6 +11,8 @@ interface Step {
 }
 
 export default function GettingStarted() {
+  const { toggleModal } = useWaitlist();
+
   const steps: Step[] = [
     {
       number: "01",
@@ -28,6 +33,7 @@ export default function GettingStarted() {
         "With your Magic Link live, you will start to get lead generation, receive client inquiries and new business requests.",
     },
   ];
+
   return (
     <div className="bg-primary-gray text-white py-16 md:py-32 lg:py-40 px-8">
       <div className="max-w-5xl mx-auto">
@@ -57,7 +63,9 @@ export default function GettingStarted() {
                 </div>
               </div>
             ))}
-            <Button className="ml-10">Get Started</Button>
+            <Button className="ml-10" onClick={toggleModal}>
+              Get Started
+            </Button>
           </div>
 
           <div className="flex justify-center">
