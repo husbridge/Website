@@ -1,8 +1,12 @@
+"use client";
+
 import Button from "../button";
 import Image from "next/image";
 import { CalendarIcon, MessageIcon, ChatQuestionIcon } from "../icons";
+import { useWaitlist } from "@/contexts/waitlist-context";
 
 export default function HeroSection() {
+  const { toggleModal } = useWaitlist();
   return (
     <section className="text-white py-16 lg:py-24">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -17,7 +21,9 @@ export default function HeroSection() {
             Receive, manage, and automate your bookings with Husridge.
           </p>
 
-          <Button className="mb-12 px-8 py-4 md:px-20">Get Started</Button>
+          <Button className="mb-12 px-8 py-4 md:px-20" onClick={toggleModal}>
+            Get Started
+          </Button>
 
           <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-8 lg:gap-12 text-sm text-gray-400">
             <div className="flex items-center gap-1.5">
