@@ -109,16 +109,16 @@ export default function Header() {
                 </button>
               </div>
 
-              <Button
+              {/* <Button
                 className="w-full"
                 // onClick={closeMenu}
                 onClick={toggleModal}
                 variant="outlined"
               >
                 Get Started
-              </Button>
+              </Button> */}
 
-              {/* {navLinks.map((link) => (
+              {navLinks.map((link) => (
                 <LinkItem
                   key={link.href}
                   href={link.href}
@@ -129,7 +129,7 @@ export default function Header() {
                 </LinkItem>
               ))}
 
-              <Link href="/register">
+              {/* <Link href="/register">
                 <Button
                   className="w-full"
                   // onClick={closeMenu}
@@ -139,6 +139,14 @@ export default function Header() {
                   Get Started
                 </Button>
               </Link> */}
+              <Button
+                className="w-full"
+                // onClick={closeMenu}
+                onClick={toggleModal}
+                variant="outlined"
+              >
+                Get Started
+              </Button>
             </motion.div>
           </>
         )}
