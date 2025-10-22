@@ -11,6 +11,7 @@ import { useWaitlist } from "@/contexts/waitlist-context";
 const navLinks = [
   { href: "/pricing", label: "Pricing" },
   { href: "/contact", label: "Contact" },
+  { href: "/features", label: "Features" },
   { href: "/sign-in", label: "Sign In" },
 ];
 
@@ -26,7 +27,7 @@ export default function Header() {
       <div className="max-w-6xl 2xl:max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <nav className="hidden md:flex items-center space-x-8">
-            {navLinks.slice(0, 2).map((link) => (
+            {navLinks.slice(0, navLinks.length - 1).map((link) => (
               <LinkItem
                 key={link.href}
                 href={link.href}
@@ -108,16 +109,16 @@ export default function Header() {
                 </button>
               </div>
 
-              <Button
+              {/* <Button
                 className="w-full"
                 // onClick={closeMenu}
                 onClick={toggleModal}
                 variant="outlined"
               >
                 Get Started
-              </Button>
+              </Button> */}
 
-              {/* {navLinks.map((link) => (
+              {navLinks.map((link) => (
                 <LinkItem
                   key={link.href}
                   href={link.href}
@@ -128,7 +129,7 @@ export default function Header() {
                 </LinkItem>
               ))}
 
-              <Link href="/register">
+              {/* <Link href="/register">
                 <Button
                   className="w-full"
                   // onClick={closeMenu}
@@ -138,6 +139,14 @@ export default function Header() {
                   Get Started
                 </Button>
               </Link> */}
+              <Button
+                className="w-full"
+                // onClick={closeMenu}
+                onClick={toggleModal}
+                variant="outlined"
+              >
+                Get Started
+              </Button>
             </motion.div>
           </>
         )}
