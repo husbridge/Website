@@ -1,8 +1,7 @@
 "use client";
 
-import { useWaitlist } from "@/contexts/waitlist-context";
-import Button from "../button";
 import Image from "next/image";
+import GetStartedButton from "../get-started-button";
 
 interface Step {
   number: string;
@@ -11,8 +10,6 @@ interface Step {
 }
 
 export default function GettingStarted() {
-  const { toggleModal } = useWaitlist();
-
   const steps: Step[] = [
     {
       number: "01",
@@ -63,9 +60,7 @@ export default function GettingStarted() {
                 </div>
               </div>
             ))}
-            <Button className="ml-10" onClick={toggleModal}>
-              Get Started
-            </Button>
+            <GetStartedButton />
           </div>
 
           <div className="flex justify-center">

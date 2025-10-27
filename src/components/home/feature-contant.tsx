@@ -1,7 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
-import Button from "../button";
 import Link from "next/link";
+import GetStartedButton from "../get-started-button";
 
 type FeatureContentProps = {
   activeTab: string;
@@ -111,7 +111,7 @@ function FeatureContent2() {
           Have total control of your calendar and upcoming events with an
           automated, online-synchronised and central scheduling.
         </p>
-        <Button>Get Started</Button>
+        <GetStartedButton />
       </div>
     </div>
   );
@@ -145,7 +145,7 @@ function FeatureContent3() {
             portfolio and contact card.{" "}
           </p>
         </div>
-        <Button>Get Started</Button>
+        <GetStartedButton />
       </div>
     </div>
   );
