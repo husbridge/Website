@@ -20,10 +20,7 @@ export default function Section({ section }: SectionProps) {
           <div className="space-y-8">
             <div className="grid gap-8 grid-cols-1 lg:grid-cols-2">
               {section.features.map((feature, idx) => (
-                <div
-                  key={idx}
-                  className={feature.fullWidth ? "col-span-2" : ""}
-                >
+                <div key={idx}>
                   <h3 className="text-xl font-medium mb-3 text-white">
                     {feature.title}
                   </h3>
