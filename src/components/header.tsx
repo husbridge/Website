@@ -4,19 +4,18 @@ import { useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
-import Button from "./button";
 import { AnimatePresence, motion } from "framer-motion";
-import { useWaitlist } from "@/contexts/waitlist-context";
+
+import GetStartedButton from "./get-started-button";
 
 const navLinks = [
   { href: "/pricing", label: "Pricing" },
   { href: "/contact", label: "Contact" },
   { href: "/features", label: "Features" },
-  { href: "/sign-in", label: "Sign In" },
+  { href: "https://app.husridge.com/login", label: "Sign In" },
 ];
 
 export default function Header() {
-  const { toggleModal } = useWaitlist();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -51,23 +50,21 @@ export default function Header() {
           </div>
 
           <div className="hidden md:flex items-center space-x-6">
-            <Button
+            {/* <Button
               className="w-full"
               // onClick={closeMenu}
               onClick={toggleModal}
               variant="outlined"
             >
               Get Started
-            </Button>
-            {/* <LinkItem
-              href="/sign-in"
+            </Button> */}
+            <LinkItem
+              href="https://app.husridge.com/login"
               className="text-white hover:text-primary-yellow transition-colors font-medium"
             >
               Sign In
             </LinkItem>
-            <Link href="/register">
-              <Button variant="outlined">Get Started</Button>
-            </Link> */}
+            <GetStartedButton variant="outlined" />
           </div>
 
           <button
@@ -129,24 +126,15 @@ export default function Header() {
                 </LinkItem>
               ))}
 
-              {/* <Link href="/register">
-                <Button
-                  className="w-full"
-                  // onClick={closeMenu}
-                  onClick={toggleModal}
-                  variant="outlined"
-                >
-                  Get Started
-                </Button>
-              </Link> */}
-              <Button
+              <GetStartedButton variant="outlined" />
+              {/* <Button
                 className="w-full"
                 // onClick={closeMenu}
                 onClick={toggleModal}
                 variant="outlined"
               >
                 Get Started
-              </Button>
+              </Button> */}
             </motion.div>
           </>
         )}

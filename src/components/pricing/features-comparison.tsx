@@ -1,13 +1,10 @@
 "use client";
 
 import { CircleCheck, CircleX } from "lucide-react";
-import Button from "../button";
-import { useWaitlist } from "@/contexts/waitlist-context";
 import { Feature, Plan } from "@/types";
+import GetStartedButton from "../get-started-button";
 
 export function FeaturesComparison() {
-  const { toggleModal } = useWaitlist();
-
   const features: Feature[] = [
     {
       name: "Bookings Management",
@@ -110,12 +107,7 @@ export function FeaturesComparison() {
               <div className="py-6"></div>
               {plans.map((plan: Plan, index: number) => (
                 <div key={index} className="py-6 px-4">
-                  <Button
-                    className="w-full opacity-80 hover:opacity-100 transition-opacity"
-                    onClick={toggleModal}
-                  >
-                    Get Started
-                  </Button>
+                  <GetStartedButton className="w-full opacity-80 hover:opacity-100 transition-opacity" />
                 </div>
               ))}
             </div>
@@ -146,12 +138,7 @@ export function FeaturesComparison() {
               </div>
 
               <div className="p-6 border-t border-gray-700">
-                <Button
-                  className="w-full opacity-80 hover:opacity-100 transition-opacity"
-                  onClick={toggleModal}
-                >
-                  Get Started
-                </Button>
+                <GetStartedButton className="w-full opacity-80 hover:opacity-100 transition-opacity" />
               </div>
             </div>
           ))}

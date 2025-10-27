@@ -2,11 +2,10 @@
 
 import Image from "next/image";
 import Button from "../button";
-import { useWaitlist } from "@/contexts/waitlist-context";
+
+import Link from "next/link";
 
 export default function GetStartedToday() {
-  const { toggleModal } = useWaitlist();
-
   return (
     <div className="text-white py-16 md:py-32 lg:py-40 px-8">
       <div className="max-w-6xl mx-auto">
@@ -16,7 +15,9 @@ export default function GetStartedToday() {
             <br className="hidden md:block" />
             what Matters
           </h2>
-          <Button onClick={toggleModal}>Get Started for free</Button>
+          <Link href="https://app.husridge.com/welcome">
+            <Button>Get Started for free</Button>
+          </Link>
         </div>
 
         <div className="flex justify-center items-end space-x-6 md:space-x-10 lg:space-x-16">

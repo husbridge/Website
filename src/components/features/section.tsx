@@ -1,10 +1,7 @@
-import Button from "../button";
-import { useWaitlist } from "@/contexts/waitlist-context";
 import { SectionProps } from "@/types/features";
+import GetStartedButton from "../get-started-button";
 
 export default function Section({ section }: SectionProps) {
-  const { toggleModal } = useWaitlist();
-
   return (
     <div className="py-16 lg:py-24">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -37,11 +34,7 @@ export default function Section({ section }: SectionProps) {
               ))}
             </div>
 
-            {section.hasButton && (
-              <Button onClick={toggleModal} className="mt-6">
-                Get Started
-              </Button>
-            )}
+            {section.hasButton && <GetStartedButton />}
           </div>
         </div>
       </div>

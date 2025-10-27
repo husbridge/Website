@@ -1,11 +1,8 @@
 "use client";
 
-import { useWaitlist } from "@/contexts/waitlist-context";
-import Button from "../button";
+import GetStartedButton from "../get-started-button";
 
 export function Plan() {
-  const { toggleModal } = useWaitlist();
-
   const plans = [
     {
       name: "Talent Account",
@@ -116,12 +113,7 @@ export function Plan() {
                   </div>
                 )}
               </div>
-              <Button
-                className="w-full opacity-80 hover:opacity-100 transition-opacity"
-                onClick={toggleModal}
-              >
-                Get Started
-              </Button>
+              <GetStartedButton className="w-full opacity-80 hover:opacity-100 transition-opacity" />
             </div>
           ))}
         </div>
