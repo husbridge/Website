@@ -26,7 +26,7 @@ function FeatureContent1() {
       ),
       title: "Bookings Management",
       description:
-        "Automate and seamlessly schedule appointments, bookings, events, and clients, and view details on your calendar for every confirmed booking.",
+        "Your Digital Booking Hub: Share your personalized Magic Link. Clients can view your profile, check your availability, and send a confirmed booking request directly to you.",
     },
     {
       icon: (
@@ -34,7 +34,7 @@ function FeatureContent1() {
       ),
       title: "Proposal Management",
       description:
-        "Receive and access proposals and contracts from clients, generate invoices and automate your booking process.",
+        "Centralized Proposal Management: Receive and review all incoming project inquiries and collaboration requests in one organized dashboard. Never miss a potential opportunity.",
     },
     {
       icon: (
@@ -42,7 +42,7 @@ function FeatureContent1() {
       ),
       title: "Collaboration Management",
       description:
-        "View and access collaboration requests from clients and colleagues.  Husridge enables you to share files and project updates.",
+        "Partnership Requests: Use your Magic Link to attract and receive collaboration proposals from brands and other creators, expanding your professional network.",
     },
   ];
   return (
@@ -106,10 +106,11 @@ function FeatureContent2() {
       </div>
 
       <div className="space-y-6">
-        <h3 className="font-semibold mb-2">Manage Schedule</h3>
+        <h3 className="font-semibold mb-2">Calendar Management</h3>
         <p className="text-neutral-400 text-sm">
-          Have total control of your calendar and upcoming events with an
-          automated, online-synchronised and central scheduling.
+          Integrated Calendar System: Automatically add confirmed events to your
+          calendar and receive smart reminders. Sync across devices so
+          you&apos;re always on top of your schedule.
         </p>
         <GetStartedButton />
       </div>
@@ -132,9 +133,9 @@ function FeatureContent3() {
         <div>
           <h3 className="font-semibold mb-2">Messaging</h3>
           <p className="text-neutral-400 text-sm">
-            Husride enables clients to connect with you directly and use
-            one-click messaging for business conversations through our
-            simplified in-app messaging feature.
+            Unified Messaging: Communicate with all your clients and
+            collaborators in one organized inbox, keeping every project&apos;s
+            conversation seamless and searchable.
           </p>
         </div>
         <div>
@@ -155,27 +156,11 @@ function FeatureContent4() {
   const inquiry = [
     {
       icon: (
-        <Image src="/tabler_1.png" alt="Inquiry Icon" width={60} height={60} />
-      ),
-      title: "Agency Talent Management",
-      description:
-        "Our platform simplifies roster management and client relations by efficiently organising talent profiles, automating client communications, and generating proposals. Manage all your talent under one umbrella and assign sub-managers to specific talents for direct management.",
-    },
-    {
-      icon: (
         <Image src="/tabler_2.png" alt="Inquiry Icon" width={60} height={60} />
       ),
-      title: "Manager Talent Management",
+      title: "Messaging",
       description:
-        "We provide a seamless way to collaborate on your talent projects, manage their calendar, and handle their day-to-day operations. We help you stay effortlessly organised and manage the business side of your talent.",
-    },
-    {
-      icon: (
-        <Image src="/tabler_3.png" alt="Inquiry Icon" width={60} height={60} />
-      ),
-      title: "Self Talent Management",
-      description:
-        "An ultimate platform tool for freelancers and independent creators to manage and track their workflow like a pro, maximising revenue, time, and increasing work efficiency. It is a tool to find and book gigs, manage their own bookings, build and share a professional online dashboard through their personal magic link. ",
+        "Unified Messaging: Communicate with all your clients and        collaborators in one organized inbox, keeping every project&apos;s conversation seamless and searchable.",
     },
   ];
   return (
