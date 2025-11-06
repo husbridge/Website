@@ -10,17 +10,17 @@ export const sectionsData: SectionData[] = [
       {
         title: "Bookings Management",
         description:
-          "Jump into pre-built layouts and start crafting faster than any other templates.",
+          "Your Digital Booking Hub: Share your personalized Magic Link. Clients can view your profile, check your availability, and send a confirmed booking request directly to you.",
       },
       {
         title: "Proposal Management",
         description:
-          "Jump into pre-built layouts and start crafting faster than any other templates.",
+          "Centralized Proposal Management: Receive and review all incoming project inquiries and collaboration requests in one organized dashboard. Never miss a potential opportunity.",
       },
       {
         title: "Collaboration Management",
         description:
-          "Jump into pre-built layouts and start crafting faster than any other templates.",
+          "Partnership Requests: Use your Magic Link to attract and receive collaboration proposals from brands and other creators, expanding your professional network.",
         fullWidth: true,
       },
     ],
@@ -35,7 +35,7 @@ export const sectionsData: SectionData[] = [
       {
         title: "Calendar Management",
         description:
-          "Jump into pre-built layouts and start crafting faster than any other templates.",
+          "Integrated Calendar System: Automatically add confirmed events to your calendar and receive smart reminders. Sync across devices so you're always on top of your schedule.",
         fullWidth: true,
       },
     ],
@@ -50,12 +50,12 @@ export const sectionsData: SectionData[] = [
       {
         title: "Invoice Generation",
         description:
-          "Jump into pre-built layouts and start crafting faster than any other templates.",
+          "Instant Invoice Generation: Create and send branded, professional invoices in seconds directly from the platform.",
       },
       {
         title: "Request Payment",
         description:
-          "Jump into pre-built layouts and start crafting faster than any other templates.",
+          "Secure Payment Requests: A streamlined system for talents and their managers to request and track client payments efficiently. (Integrated payment processing coming soon)",
       },
     ],
     hasButton: true,
@@ -69,7 +69,7 @@ export const sectionsData: SectionData[] = [
       {
         title: "Messaging",
         description:
-          "Jump into pre-built layouts and start crafting faster than any other templates.",
+          "Unified Messaging: Communicate with all your clients and collaborators in one organized inbox, keeping every project's conversation seamless and searchable.",
         fullWidth: true,
       },
     ],
