@@ -131,19 +131,18 @@ function FeatureContent3() {
       </div>
       <div className="space-y-6">
         <div>
-          <h3 className="font-semibold mb-2">Messaging</h3>
+          <h3 className="font-semibold mb-2">Invoice generation</h3>
           <p className="text-neutral-400 text-sm">
-            Unified Messaging: Communicate with all your clients and
-            collaborators in one organized inbox, keeping every project&apos;s
-            conversation seamless and searchable.
+            Instant Invoice Generation: Create and send branded, professional
+            invoices in seconds directly from the platform.
           </p>
         </div>
         <div>
-          <h3 className="font-semibold mb-2">Magic Link</h3>
+          <h3 className="font-semibold mb-2">Request Payment</h3>
           <p className="text-neutral-400 text-sm">
-            Magic Link is a shareable link that allows clients to reach talents
-            and service providers. It also serves as an all-in-one professional
-            portfolio and contact card.{" "}
+            Secure Payment Requests: A streamlined system for talents and their
+            managers to request and track client payments efficiently.
+            (Integrated payment processing coming soon)
           </p>
         </div>
         <GetStartedButton />
