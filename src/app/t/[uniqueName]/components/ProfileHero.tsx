@@ -1,7 +1,27 @@
+"use client";
+
 import Image from "next/image";
 import { BadgeCheck } from "lucide-react";
 import Button from "@/components/button";
 import { PublishedProfile } from "@/lib/publicProfile";
+
+// Book/Message need an onClick, which means this now has to be a client
+// component (it wasn't before — the buttons were purely visual).
+//
+// app.husridge.com is a different origin — it can't read this origin's
+// (there isn't one; this page has no buyer session at all) auth state,
+// so Book/Message always hand off to app.husridge.com/inquiry/start,
+// which decides there (where the buyer's session actually lives)
+// whether to go straight into the inquiry or through signup/login
+// first. Only talent + inquiry type travel in the URL — never a raw
+// redirect target — /inquiry/start builds the internal destination
+// itself from those two validated values.
+const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.husridge.com";
+
+function inquiryStartUrl(uniqueUsername: string, type: "booking" | "message") {
+  const params = new URLSearchParams({ talent: uniqueUsername, type });
+  return `${APP_URL}/inquiry/start?${params.toString()}`;
+}
 
 // Hero — the thing that has to land for this to read as a real profile
 // page, not a form. Dark-themed with a yellow-accent glow (direction (a)
@@ -79,10 +99,30 @@ export default function ProfileHero({
           )}
 
           <div className="mt-8 flex gap-3 justify-center md:justify-start">
-            <Button variant="filled" size="lg" className="whitespace-nowrap">
+            <Button
+              variant="filled"
+              size="lg"
+              className="whitespace-nowrap"
+              onClick={() => {
+                window.location.href = inquiryStartUrl(
+                  profile.uniqueUsername,
+                  "booking",
+                );
+              }}
+            >
               Book {firstName}
             </Button>
-            <Button variant="outlined" size="lg" className="whitespace-nowrap">
+            <Button
+              variant="outlined"
+              size="lg"
+              className="whitespace-nowrap"
+              onClick={() => {
+                window.location.href = inquiryStartUrl(
+                  profile.uniqueUsername,
+                  "message",
+                );
+              }}
+            >
               Message
             </Button>
           </div>
