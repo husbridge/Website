@@ -3,9 +3,27 @@
 @theme {
   --color-primary-yellow: #FEC009;
   --color-primary-dark-yellow: #FFC107;
-  --color-primary-black: #101214;  
+  --color-primary-black: #101214;
   --color-primary-gray: #171A1E;
   --color-primary-light-gray: #313A4733;
   --color-primary-white: #F5F5F6E5;
   --color-primary-dark-white: #FFFFFF99;
+
+  /* Ported from app.husridge.com (Frontend) for the /t/[uniqueName] public
+     profile page (Phase 1 Step 6) — that app has no shared design-tokens
+     package with this site (different repo, Tailwind v3 vs v4, no
+     Mantine here), so these are manually kept in sync rather than
+     imported. Source of truth: Frontend's tailwind.config.js
+     (`black-100`) and its .btn--primary/.btn--black rules in
+     src/styles/global.scss. --color-app-black is the app's TRUE black
+     (buttons, primary text) — deliberately distinct from
+     --color-primary-black above (#101214), which is this site's dark
+     page-shell tone, not the app's button color. --color-app-card-bg is
+     a reasonable default for the light card this page sits in (a warm
+     off-white rather than pure #FFFFFF, since it sits on a very dark
+     #101214 shell) — flagged for a visual check, not a value ported
+     from anywhere. */
+  --color-app-black: #000000;
+  --color-app-card-bg: #FAFAF7;
+  --color-app-border: #E5E5E5;
 }
