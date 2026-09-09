@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
-import Footer from "@/components/footer";
-import Header from "@/components/header";
 
 export const metadata: Metadata = {
   title: "Home | Husridge",
@@ -21,9 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`antialiased bg-primary-black ${montserrat.className}`}>
-        <Header />
         {children}
-        <Footer />
       </body>
     </html>
   );
