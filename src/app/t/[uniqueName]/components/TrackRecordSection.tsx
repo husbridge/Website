@@ -1,7 +1,10 @@
+import Image from "next/image";
+import { Award } from "lucide-react";
 import { PublishedProfile } from "@/lib/publicProfile";
 
-// "Track record" — years of experience, brands worked with. Matches My
-// Page's Track record section field set exactly.
+// "Track record" — years of experience as an inline stat, brands worked
+// with as small chips (logo if present, name otherwise) — not another
+// bordered box.
 export default function TrackRecordSection({
   profile,
 }: {
@@ -12,32 +15,48 @@ export default function TrackRecordSection({
   if (!hasContent) return null;
 
   return (
-    <div className="space-y-4">
+    <div className="flex flex-wrap items-center gap-x-10 gap-y-4">
       {typeof profile.yearsExperience === "number" && (
-        <p className="text-sm">
-          <span className="font-semibold text-app-black">
-            {profile.yearsExperience}
-          </span>{" "}
-          <span className="text-app-black/70">
-            year{profile.yearsExperience === 1 ? "" : "s"} of experience
+        <div className="flex items-center gap-3">
+          <span className="w-10 h-10 rounded-full bg-primary-yellow/15 text-primary-dark-yellow flex items-center justify-center flex-none">
+            <Award size={18} />
           </span>
-        </p>
+          <div>
+            <p className="text-2xl font-bold text-white leading-none">
+              {profile.yearsExperience}
+            </p>
+            <p className="text-xs text-white/40">
+              year{profile.yearsExperience === 1 ? "" : "s"} experience
+            </p>
+          </div>
+        </div>
       )}
       {profile.brands.length > 0 && (
-        <div>
-          <p className="text-xs font-semibold text-app-black/50 uppercase tracking-wide mb-2">
-            Brands worked with
-          </p>
-          <div className="flex flex-wrap gap-2">
-            {profile.brands.map((brand, i) => (
+        <div className="flex flex-wrap items-center gap-3">
+          {profile.brands.map((brand, i) =>
+            brand.logoUrl ? (
+              <div
+                key={brand._id || i}
+                className="w-10 h-10 rounded-full overflow-hidden relative bg-white/5"
+                title={brand.name}
+              >
+                <Image
+                  src={brand.logoUrl}
+                  alt={brand.name}
+                  fill
+                  className="object-cover"
+                  sizes="40px"
+                />
+              </div>
+            ) : (
               <span
                 key={brand._id || i}
-                className="text-xs bg-app-border/60 text-app-black rounded-full px-3 py-1"
+                className="text-sm bg-white/5 text-white/70 rounded-full px-3 py-1.5"
               >
                 {brand.name}
               </span>
-            ))}
-          </div>
+            ),
+          )}
         </div>
       )}
     </div>

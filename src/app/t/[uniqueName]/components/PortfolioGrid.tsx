@@ -1,19 +1,18 @@
 import Image from "next/image";
 import { PublishedProfile } from "@/lib/publicProfile";
 
-// "Portfolio" — the full grid, matching the portfolio manager's grid
-// treatment in My Page (Frontend): square thumbnails, rounded card,
-// title below, responsive column count. Read-only here (no reorder/edit
-// — this is the public view).
+// "Portfolio" — an actual media grid, dark cards matching the site's
+// shell rather than light bordered boxes. Hidden entirely when empty
+// (per review: a "No portfolio items yet" box read like a form error,
+// not an intentional empty state) — nothing useful to show a buyer here
+// yet, so the section just doesn't render.
 export default function PortfolioGrid({
   profile,
 }: {
   profile: PublishedProfile;
 }) {
   const items = profile.portfolioItems;
-  if (items.length === 0) {
-    return <p className="text-sm text-app-black/50">No portfolio items yet.</p>;
-  }
+  if (items.length === 0) return null;
 
   return (
     <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -22,25 +21,25 @@ export default function PortfolioGrid({
         return (
           <div
             key={item._id}
-            className="border border-app-border rounded-2xl overflow-hidden"
+            className="group rounded-2xl overflow-hidden bg-white/5"
           >
-            <div className="aspect-square bg-app-border/40 relative">
+            <div className="aspect-square relative bg-primary-black">
               {media && (
                 <Image
                   src={media.thumbnailUrl || media.url}
                   alt={item.title}
                   fill
-                  className="object-cover"
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
                   sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
                 />
               )}
             </div>
             <div className="p-3">
-              <p className="text-sm font-semibold text-app-black truncate">
+              <p className="text-sm font-semibold text-white truncate">
                 {item.title}
               </p>
               {item.category && (
-                <p className="text-xs text-app-black/50">{item.category}</p>
+                <p className="text-xs text-white/40">{item.category}</p>
               )}
             </div>
           </div>
