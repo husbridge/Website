@@ -5,6 +5,7 @@ import ProfileHero from "./components/ProfileHero";
 import SectionLabel from "./components/SectionLabel";
 import AboutSection from "./components/AboutSection";
 import PortfolioGrid from "./components/PortfolioGrid";
+import PackagesSection from "./components/PackagesSection";
 import ReachSection from "./components/ReachSection";
 import TrackRecordSection from "./components/TrackRecordSection";
 import HoldingScreen from "./components/HoldingScreen";
@@ -71,6 +72,7 @@ export default async function PublicProfilePage({ params }: PageProps) {
     profile.skills.length > 0 ||
     profile.serviceAreas.length > 0;
   const hasPortfolio = profile.portfolioItems.length > 0;
+  const hasPackages = profile.packages.length > 0;
   const hasReach =
     profile.socialAccounts.length > 0 ||
     Object.values(profile.socialLinks).some(Boolean);
@@ -86,6 +88,11 @@ export default async function PublicProfilePage({ params }: PageProps) {
           {hasAbout && (
             <SectionLabel title="About">
               <AboutSection profile={profile} />
+            </SectionLabel>
+          )}
+          {hasPackages && (
+            <SectionLabel title="Packages">
+              <PackagesSection profile={profile} />
             </SectionLabel>
           )}
           {hasPortfolio && (
