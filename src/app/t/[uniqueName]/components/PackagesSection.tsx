@@ -1,22 +1,23 @@
 "use client";
 
+import Image from "next/image";
 import { PublishedProfile, PublicPackage } from "@/lib/publicProfile";
 import { inquiryStartUrl } from "@/lib/inquiryStart";
 import { formatMoney } from "@/lib/money";
 import Button from "@/components/button";
 
-// "Packages" — a priced offer with deliverables, so it borrows the two
-// visual primitives already established for exactly that kind of content
-// elsewhere on this page rather than a bordered card (which this page's
-// own history already moved away from — see SectionLabel): the price
-// reads as a stat, the same big-bold-number treatment TrackRecordSection
-// uses for years of experience, and deliverables render as the same pill
-// chips AboutSection uses for skills/categories. Rows are separated by a
-// hairline divider, not individually boxed.
-//
-// This is also where a buyer picks a package BEFORE starting contact
-// (PHASE2_DESIGN.md §1) — "Book this package" carries packageId through
-// the same inquiry-start handoff the hero's plain "Book" already uses.
+// "Packages" — a card grid, the same treatment PortfolioGrid already
+// established as this page's answer to "content with an image" (the one
+// place this page uses a bordered/boxed card at all, and for the same
+// reason: nothing else fits a real photo as well). A package now carries
+// one, so it earns the same primitive rather than a new one — but it
+// isn't a portfolio thumbnail: price is the loudest thing on the card
+// (the same big-stat treatment TrackRecordSection uses elsewhere), and
+// every card ends in an action, because a package is an offer to buy, not
+// a fact to browse. No image set yet (most talents won't have one at
+// first) falls back to the exact gradient ProfileHero already uses for a
+// photo-less profile — a placeholder this page has already established,
+// not an invented one.
 export default function PackagesSection({
   profile,
 }: {
@@ -34,13 +35,30 @@ export default function PackagesSection({
   }
 
   return (
-    <div className="divide-y divide-white/10">
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
       {packages.map((pkg) => (
         <div
           key={pkg._id}
-          className="py-6 first:pt-0 last:pb-0 flex flex-col md:flex-row md:items-center gap-4 md:gap-8"
+          className="flex flex-col rounded-2xl overflow-hidden bg-white/5"
         >
-          <div className="flex-1 min-w-0">
+          <div className="aspect-[16/10] relative bg-primary-black flex-none">
+            {pkg.image ? (
+              <Image
+                src={pkg.image}
+                alt={pkg.label}
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 100vw, 50vw"
+              />
+            ) : (
+              <div className="absolute inset-0 bg-gradient-to-br from-primary-light-gray to-primary-black" />
+            )}
+            <span className="absolute top-3 right-3 bg-primary-yellow text-primary-black text-lg font-bold px-3 py-1.5 rounded-full whitespace-nowrap">
+              {formatMoney(pkg.price, pkg.currency)}
+            </span>
+          </div>
+
+          <div className="flex flex-col flex-1 p-5">
             <p className="text-lg font-semibold text-white">{pkg.label}</p>
             {pkg.description && (
               <p className="text-sm text-white/60 mt-1 leading-relaxed">
@@ -66,16 +84,11 @@ export default function PackagesSection({
                 : `${pkg.revisions} revisions`}{" "}
               included
             </p>
-          </div>
 
-          <div className="flex flex-row md:flex-col items-center md:items-end justify-between md:justify-center gap-4 md:gap-3 md:flex-none">
-            <p className="text-2xl font-bold text-white leading-none whitespace-nowrap">
-              {formatMoney(pkg.price, pkg.currency)}
-            </p>
             <Button
               variant="filled"
               size="md"
-              className="whitespace-nowrap"
+              className="mt-4 whitespace-nowrap"
               onClick={() => book(pkg)}
             >
               Book this package
