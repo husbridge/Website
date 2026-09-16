@@ -74,6 +74,22 @@ export interface PublicAgency {
   agencyName: string;
 }
 
+// PHASE2_DESIGN.md (husridge-server) — PackagePublicDto. price is always an
+// integer in the smallest unit of `currency` (kobo for NGN), never a float.
+export interface PublicPackage {
+  _id: string;
+  category: string;
+  label: string;
+  description: string;
+  price: number;
+  currency: string;
+  deliverables: string[];
+  turnaroundDays: number;
+  revisions: number;
+  terms: string;
+  sortOrder: number;
+}
+
 // The full, published shape — data.isPublished is always present; every
 // other field is only guaranteed when isPublished is true (see
 // UnpublishedProfile below for the other case).
@@ -104,6 +120,7 @@ export interface PublishedProfile {
   brands: Brand[];
   isPublished: true;
   portfolioItems: PublicPortfolioItem[];
+  packages: PublicPackage[];
 }
 
 // The holding-screen shape husridge-server returns when the profile
