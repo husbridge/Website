@@ -2,20 +2,8 @@
 
 import { PublishedProfile, PublicPackage } from "@/lib/publicProfile";
 import { inquiryStartUrl } from "@/lib/inquiryStart";
+import { formatMoney } from "@/lib/money";
 import Button from "@/components/button";
-
-// price is always an integer in the smallest unit of `currency`
-// (PHASE2_DESIGN.md) — /100 is correct for every currency this platform
-// currently supports (NGN only, so far); a currency with a different
-// minor-unit exponent (e.g. JPY at 0, BHD at 3) would need this to branch
-// on `currency`, not divide by a fixed 100.
-function formatPrice(price: number, currency: string) {
-  return new Intl.NumberFormat("en-NG", {
-    style: "currency",
-    currency,
-    maximumFractionDigits: 0,
-  }).format(price / 100);
-}
 
 // "Packages" — a priced offer with deliverables, so it borrows the two
 // visual primitives already established for exactly that kind of content
@@ -82,7 +70,7 @@ export default function PackagesSection({
 
           <div className="flex flex-row md:flex-col items-center md:items-end justify-between md:justify-center gap-4 md:gap-3 md:flex-none">
             <p className="text-2xl font-bold text-white leading-none whitespace-nowrap">
-              {formatPrice(pkg.price, pkg.currency)}
+              {formatMoney(pkg.price, pkg.currency)}
             </p>
             <Button
               variant="filled"
