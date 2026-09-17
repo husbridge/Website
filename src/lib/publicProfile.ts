@@ -1,9 +1,11 @@
 // Types + fetch for GET /public/profiles/:uniqueName — husridge-server's
 // whitelisted public endpoint (ProfileService.getWhitelistedPublicProfile /
 // ProfilePublicDto). This is the SAME API My Page's Preview & Publish bar
-// is built against on the private side; this is its public counterpart —
-// gates on isPublished (unlike the legacy /profile/pub/usr/:username route
-// the old Contact page uses), and returns only PROFILE_PUBLIC_ALLOWED_KEYS.
+// is built against on the private side; this is its public counterpart,
+// and returns only PROFILE_PUBLIC_ALLOWED_KEYS. (The old Contact page used
+// a separate /profile/pub/usr/:username route with a brief history of
+// gating differently — closed, then the route itself retired in the
+// surface-consolidation pass; nothing here was ever affected by it.)
 //
 // No shared types package with Frontend (different repo) — these are
 // hand-kept in sync with husridge-server's ProfilePublicDto. See
