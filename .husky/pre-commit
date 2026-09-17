@@ -1,1 +1,6 @@
+if [ -f package-lock.json ]; then
+  echo "✖ package-lock.json exists — this repo uses yarn.lock only (an npm install created it). Run: git rm package-lock.json && yarn install, then commit the resynced yarn.lock." >&2
+  exit 1
+fi
+
 npx lint-staged
